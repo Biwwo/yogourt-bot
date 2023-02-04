@@ -43,7 +43,7 @@ def find(name, path):
 async def on_ready():
     #Change Activity
     await bot.change_presence(activity=discord.Game('Humeur bot'))
-    print("Author : AzRodde\nVersion : 1.0")
+    print("Author : Nzo\nVersion : 1.0")
     print("Bot is ready \n----------")
 
 
@@ -120,4 +120,4 @@ async def on_raw_reaction_add(payload):
             member = guild.get_member(int(payload.user_id))
             await member.edit(nick=f"🧃 {ex_nickname}")
 
-bot.run(token)
+bot.run(process.env.TOKEN)
